@@ -89,7 +89,7 @@ class Category extends Model {
 					SELECT a.idproduct
 					FROM tb_products a
 					INNER JOIN tb_productscategories b ON a.idproduct = b.idproduct
-					WHERE b.idcategory = idcategory
+					WHERE b.idcategory = :idcategory
 					);
 				",[
 					':idcategory'=>$this->getidcategory()
